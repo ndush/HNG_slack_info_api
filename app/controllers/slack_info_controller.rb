@@ -6,7 +6,7 @@ class SlackInfoController < ApplicationController
     track = params[:track] || 'frontend'
 
     # Construct GitHub URLs (replace with your actual URLs)
-    github_file_url = 'https://github.com/ndush/slack_info_api/blob/main/slack_info_api.rb'
+    github_file_url = 'https://github.com/ndush/slack_info_api/blob/main/app/controllers/slack_info_controller.rb'
     github_repo_url = 'https://github.com/ndush/slack_info_api'
 
     # Validate UTC time within +/-2 minutes
