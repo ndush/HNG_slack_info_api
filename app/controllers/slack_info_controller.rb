@@ -1,8 +1,8 @@
 class SlackInfoController < ApplicationController
   def info
-    slack_name = params[:slack_name] || 'damaris'
+    slack_name = params[:slack_name] 
     current_day = Time.now.strftime('%A')
-    track = params[:track] || 'frontend'
+    track = params[:track] 
     
     github_file_url = 'https://github.com/ndush/slack_info_api/blob/main/app/controllers/slack_info_controller.rb'
     github_repo_url = 'https://github.com/ndush/slack_info_api'
