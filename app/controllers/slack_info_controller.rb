@@ -2,14 +2,13 @@ class SlackInfoController < ApplicationController
   def info
     slack_name = params[:slack_name] || 'damaris'
     current_day = Time.now.strftime('%A')
-    utc_time = Time.now.utc
     track = params[:track] || 'frontend'
-
     
     github_file_url = 'https://github.com/ndush/slack_info_api/blob/main/app/controllers/slack_info_controller.rb'
     github_repo_url = 'https://github.com/ndush/slack_info_api'
 
-  
+    utc_time = Time.now.utc 
+
     time_diff = (utc_time - Time.now).to_i
     is_valid_utc_time = time_diff.abs <= 120 
 
