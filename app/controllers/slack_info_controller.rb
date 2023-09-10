@@ -5,13 +5,13 @@ class SlackInfoController < ApplicationController
     utc_time = Time.now.utc
     track = params[:track] || 'frontend'
 
-    # Construct GitHub URLs (replace with your actual URLs)
+    
     github_file_url = 'https://github.com/ndush/slack_info_api/blob/main/app/controllers/slack_info_controller.rb'
     github_repo_url = 'https://github.com/ndush/slack_info_api'
 
-    # Validate UTC time within +/-2 minutes
+  
     time_diff = (utc_time - Time.now).to_i
-    is_valid_utc_time = time_diff.abs <= 120  # 2 minutes = 120 seconds
+    is_valid_utc_time = time_diff.abs <= 120 
 
     if is_valid_utc_time
       utc_time_str = utc_time.strftime('%Y-%m-%dT%H:%M:%SZ')
