@@ -1,0 +1,11 @@
+app = "slack-info-api"
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+
+[[services]]
+  internal_port = 3000
+  protocol = "tcp"
+
+[[deploy.targets]]
+  name = "fly-production"
